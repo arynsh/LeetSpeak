@@ -24,7 +24,7 @@ namespace LeetSpeak.Tests {
       [TestMethod]
      public void Translator_ITranslatesTo1_1()
     {
-       LeetSpeakTranslator testObj = new LeetSpeakTranslator("i");
+       LeetSpeakTranslator testObj = new LeetSpeakTranslator("I");
        Assert.AreEqual("1", testObj.Translator()); 
     }
 
@@ -34,11 +34,19 @@ namespace LeetSpeak.Tests {
        LeetSpeakTranslator testObj = new LeetSpeakTranslator("t");
        Assert.AreEqual("7", testObj.Translator()); 
     }
+
       [TestMethod]
-     public void Translator_STranslatesToZ_Z()
+     public void Translator_STranslatesToZ_s()
     {
-       LeetSpeakTranslator testObj = new LeetSpeakTranslator("z");
-       Assert.AreEqual("z", testObj.Translator()); 
+       LeetSpeakTranslator testObj = new LeetSpeakTranslator("s");
+       Assert.AreEqual("s", testObj.Translator()); 
+    }
+
+       [TestMethod]
+     public void Translator_STranslatesToZ_jz()
+    {
+       LeetSpeakTranslator testObj = new LeetSpeakTranslator("js");
+       Assert.AreEqual("jz", testObj.Translator()); 
     }
   }
 
